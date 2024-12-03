@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biceps Exercise Tracker</title>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    video, canvas {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    #feedback {
+      font-size: 1.5em;
+      color: green;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Biceps Exercise Tracker</h1>
+  <video id="video" autoplay playsinline></video>
+  <canvas id="output"></canvas>
+  <p>Repetitions: <span id="reps">0</span></p>
+  <div id="feedback"></div>
+  <canvas id="chart" width="800" height="400"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
